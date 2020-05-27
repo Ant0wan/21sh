@@ -6,7 +6,7 @@
 /*   By: snunes <snunes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 13:21:12 by snunes            #+#    #+#             */
-/*   Updated: 2020/05/27 14:40:52 by abarthel         ###   ########.fr       */
+/*   Updated: 2020/05/27 15:07:03 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ void		get_cursor_position(int *row, int *col)
 	input[0] = get_first_input();
 	while (*input != 'R')
 	{
-		read(STDIN_FILENO, input, 1);
+		if (read(STDIN_FILENO, input, 1))
+			(void)input;
 		if (*input >= '0' && *input <= '9')
 		{
 			if (a == 0)
