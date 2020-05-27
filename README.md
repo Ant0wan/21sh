@@ -48,6 +48,6 @@ In order to run the automated tests on your system make sure prerequisites are m
 make test
 ```
 
-## Deployment
+## Demo
 
-An online version of the shell is available at 21sh
+An online version of the shell is available at 21sh for test purposes.
