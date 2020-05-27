@@ -5,26 +5,3 @@ An implementation of a very small **shell** [a 42 project].
 
 This project follows [Minishell](https://github.com/Ant0wan/Minishell) and aims at getting a better grasp of the parsing theories, job control and general programming in Unix environment.
 
----
-
-#### Debugging
-
-Detect leaks and runtime errors:
-```shell
-valgrind --leak-check=full --track-origins=yes ./21sh
-```
-
-Monitor subshells and child processes:
-```shell
-ps -o stat,pid,pgid,ppid,sid,tpgid,comm
-```
-
-Trace process signals and status updates:
-```shell
-strace -e 'trace=!all' bash --posix
-```
-
-Locate source of bug:
-```C
-ft_printf("%s line: %d : e_invalid_input\n", __FILE__, __LINE__); //DEBUGG
-```
