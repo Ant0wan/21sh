@@ -6,7 +6,7 @@
 /*   By: snunes <snunes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 12:12:38 by snunes            #+#    #+#             */
-/*   Updated: 2020/05/26 10:13:28 by abarthel         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:41:44 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,8 @@ static void	print_range(char *compl)
 			break ;
 		track++;
 	}
-	write(g_dis.fd, compl, track);
+	if (write(g_dis.fd, compl, track) < 0)
+		(void)g_dis.fd;
 	if (g_dis.start_line + v_pos >= g_sc.height)
 		g_dis.start_line -= g_dis.start_line + v_pos - g_sc.height + 1;
 }

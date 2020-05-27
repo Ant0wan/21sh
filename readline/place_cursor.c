@@ -6,7 +6,7 @@
 /*   By: snunes <snunes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 10:03:00 by snunes            #+#    #+#             */
-/*   Updated: 2020/05/26 18:43:12 by snunes           ###   ########.fr       */
+/*   Updated: 2020/05/27 14:42:48 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,8 @@ void		update_dumb_line(void)
 		to_print[g_sc.w - 1] = '>';
 	ft_putstr_fd(to_print, g_dis.fd);
 	ft_putchar_fd('\r', g_dis.fd);
-	write(g_dis.fd, to_print, g_line.c_pos + g_dis.prompt_l - offset);
+	if (write(g_dis.fd, to_print, g_line.c_pos + g_dis.prompt_l - offset) < 0)
+		(void)g_dis.fd;
 	free(to_print);
 }
 

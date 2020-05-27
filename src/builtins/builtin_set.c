@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 08:43:11 by abarthel          #+#    #+#             */
-/*   Updated: 2020/05/20 22:01:00 by yforeau          ###   ########.fr       */
+/*   Updated: 2020/05/27 14:35:26 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	print_set(void)
 			{
 				ft_printf("%s=", var->name);
 				double_quote_print_fd(value, STDOUT_FILENO);
-				write(STDOUT_FILENO, "\n", 1);
+				ft_printf("\n");
 			}
 			else
 				ft_printf("%s=%s\n", var->name, value);

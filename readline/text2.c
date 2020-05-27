@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 14:14:17 by abarthel          #+#    #+#             */
-/*   Updated: 2020/05/26 18:54:46 by snunes           ###   ########.fr       */
+/*   Updated: 2020/05/27 14:43:18 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 void	kill_line(void)
 {
-	write(g_dis.fd, "^C", 2);
+	if (write(g_dis.fd, "^C", 2) < 0)
+		(void)g_dis.fd;
 	g_retval = SIGINT + 128;
 	if (g_back)
 		stack_delete(&g_back, del_stat_line);

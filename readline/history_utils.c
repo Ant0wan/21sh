@@ -6,7 +6,7 @@
 /*   By: snunes <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/10 19:32:41 by snunes            #+#    #+#             */
-/*   Updated: 2020/05/05 20:13:18 by snunes           ###   ########.fr       */
+/*   Updated: 2020/05/27 14:42:13 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,8 @@ void	free_hist(void)
 				g_hist.history_content[i] = '\n';
 			i++;
 		}
-		write(fd, g_hist.history_content + 1, g_hist.used - 1);
+		if (write(fd, g_hist.history_content + 1, g_hist.used - 1) < 0)
+			(void)g_dis.fd;
 		close(fd);
 	}
 	hist_free();

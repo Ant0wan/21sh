@@ -6,7 +6,7 @@
 /*   By: abarthel <abarthel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 12:08:44 by abarthel          #+#    #+#             */
-/*   Updated: 2020/05/20 22:00:46 by yforeau          ###   ########.fr       */
+/*   Updated: 2020/05/27 14:34:48 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static int	print_export(t_shell_var *svar)
 		{
 			ft_printf("export %s=", svar->name);
 			double_quote_print_fd(value, STDOUT_FILENO);
-			write(STDOUT_FILENO, "\n", 1);
+			if (write(STDOUT_FILENO, "\n", 1) < 0)
+				return (e_system_call_error);
 		}
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: snunes <snunes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/10 15:04:33 by snunes            #+#    #+#             */
-/*   Updated: 2020/05/20 21:47:35 by yforeau          ###   ########.fr       */
+/*   Updated: 2020/05/27 14:33:59 by abarthel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static int	print_alias(t_shell_var *svar)
 {
 	ft_printf("%s=", svar->name);
 	single_quote_print_fd(svar->value, STDOUT_FILENO);
-	write(STDOUT_FILENO, "\n", 1);
+	if  (write(STDOUT_FILENO, "\n", 1) < 0)
+		return (e_system_call_error);
 	return (0);
 }
 
@@ -30,7 +31,8 @@ static int	print_single_alias(char *name, char *value)
 		return (FAILURE);
 	ft_printf("%s=", name);
 	single_quote_print_fd(value, STDOUT_FILENO);
-	write(STDOUT_FILENO, "\n", 1);
+	if  (write(STDOUT_FILENO, "\n", 1) < 0)
+		return (e_system_call_error);
 	return (SUCCESS);
 }
 
