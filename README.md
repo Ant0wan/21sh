@@ -68,6 +68,11 @@ The command line edition feature uses only the termcaps library. It mimics as mu
 
 - Command line history and lookup using arrows and `C-r`
 
+- `hash` builtin
+
+- `alias` utilities
+
+
 ### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See below sections for notes on how to build and run the project on a live system.
