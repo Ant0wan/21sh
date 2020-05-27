@@ -8,50 +8,11 @@ This project follows [Minishell](https://github.com/Ant0wan/Minishell) and aims 
 
 ### Description
 
-21sh implements some features such as multiple commands on the same line, redirections as well as multi-line edition that allows users to naigate through typed input.
+21sh implements some features such as multiple commands on the same line, redirections as well as multi-line edition that allows users to navigate through typed input.
 
 Only the following functions were allowed for this project:
 ```
-malloc
-free
-access
-open
-close
-read
-write
-opendir
-readdir
-closedir
-getcwd
-chdir
-stat
-lstat
-fstat
-fork
-execve
-wait
-waitpid
-wait3
-wait4
-signal
-kill
-exit
-pipe
-dup
-dup2
-isatty
-ttyname
-ttyslot
-ioctl
-getenv
-tcsetattr
-tcgetattr
-tgetent
-tgetflag
-tgetnum
-tgetstr
-tgoto
-tputs
+malloc, free, access, open, close, read, write, opendir, readdir, closedir, getcwd, chdir, stat, lstat, fstat, fork, execve, wait, waitpid, wait3, wait4, signal, kill, exit, pipe, dup, dup2, isatty, ttyname, ttyslot, ioctl, getenv, tcsetattr, tcgetattr, tgetent, tgetflag, tgetnum, tgetstr, tgoto, tputs
 ```
 
 The command line edition feature uses only the termcaps library. It mimics as mush as possible the `emacs` and `vim` binding and edition mode can be modified using the `set -o` utility.
