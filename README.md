@@ -47,7 +47,3 @@ In order to run the automated tests on your system make sure prerequisites are m
 ```shell=
 make test
 ```
-
-## Demo
-
-An online version of the shell is available at 21sh for test purposes.
