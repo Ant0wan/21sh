@@ -7,7 +7,7 @@ This project follows [Minishell](https://github.com/Ant0wan/Minishell) and aims 
 
 ---
 
-### Description
+## Description
 
 21sh implements some features such as multiple commands on the same line, redirections as well as multi-line edition that allows users to navigate through typed input.
 
