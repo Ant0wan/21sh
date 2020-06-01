@@ -5,8 +5,6 @@ An implementation of a very small **shell** [a 42 project].
 
 This project follows [Minishell](https://github.com/Ant0wan/Minishell) and aims at getting a better grasp of the parsing theories, job control and general programming in Unix environment.
 
----
-
 ## Description
 
 21sh implements some features such as multiple commands on the same line, redirections as well as multi-line edition that allows users to navigate through typed input.
@@ -34,9 +32,8 @@ The command line edition feature uses only the termcaps library. It mimics as mu
 
 - `alias` utilities
 
----
 
-### Getting Started
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See below sections for notes on how to build and run the project on a live system.
 
@@ -44,9 +41,8 @@ These instructions will get you a copy of the project up and running on your loc
 git clone https://github.com/Ant0wan/21sh
 ```
 
----
 
-### Prerequisites
+## Prerequisites
 
 Here are the things you need to build and use 21sh.
 
@@ -65,9 +61,8 @@ In order to run the automated tests some additional utilities are required or ne
 apt-get install -y bash perl
 ```
 
----
 
-### Build
+## Build
 
 There is only one step to build 21sh
 
@@ -75,9 +70,8 @@ There is only one step to build 21sh
 make -j
 ```
 
----
 
-### Running the tests
+## Running the tests
 
 In order to run the automated tests on your system make sure prerequisites are met, then simply execute the command
 ```shell=
